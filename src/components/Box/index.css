@@ -1,9 +1,21 @@
+.main {
+  display: grid;
+  grid-template-rows: repeat(1fr 3);
+  grid-gap: 1rem;
+  place-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
 .box {
-  width: 500px;
+  justify-self: center;
+  grid-row: 2;
+  width: 350px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 4rem;
 }
 
 .slider {
@@ -22,45 +34,111 @@
 
 .right {
   top: 48%;
-  left: 55%;
+  left: 60%;
   transform: rotate(90deg);
 }
 
 .left {
   top: 48%;
-  left: -55%;
+  left: -60%;
   transform: rotate(90deg);
 }
 
 .bottom {
-  bottom: -10%;
+  bottom: -5%;
   left: 0;
 }
 
 /* Copy to Clip Board */
 
-.user__content {
-  position: fixed;
-  bottom: 15%;
-  font-size: 2rem;
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.title {
-  color: aliceblue;
-  font-size: 3rem;
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
-.actual__output {
-  background-color: #272727;
-  padding: 20px;
-  color: aliceblue;
-  letter-spacing: 5px;
+.header {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
 }
 
-.clipboard {
-  background-color: aliceblue;
-  padding: 20px;
-  color: #272727;
+.header__title {
+  grid-row: 1;
+  font-size: 4rem;
+  color: rgb(235, 187, 187);
+  word-wrap: break-word;
+  line-height: 1.2;
+  margin: 1rem;
+  font-weight: bold;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(10deg,
+      hsl(315deg 73% 10%) 0%,
+      hsl(322deg 76% 15%) 0%,
+      hsl(330deg 78% 20%) -1%,
+      hsl(338deg 81% 25%) 0%,
+      hsl(346deg 84% 30%) 2%,
+      hsl(354deg 87% 35%) 7%,
+      hsl(1deg 89% 40%) 18%,
+      hsl(9deg 92% 45%) 31%,
+      hsl(17deg 95% 50%) 42%,
+      hsl(21deg 96% 53%) 52%,
+      hsl(25deg 97% 55%) 60%,
+      hsl(30deg 97% 57%) 68%,
+      hsl(34deg 98% 60%) 75%,
+      hsl(38deg 98% 62%) 82%,
+      hsl(42deg 99% 65%) 88%,
+      hsl(46deg 100% 68%) 94%,
+      hsl(50deg 100% 70%) 100%);
+}
+
+.header__desc {
+  padding: 0;
+  margin: 0;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.content__actual {
+  grid-row: -1;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  word-wrap: word-wrap;
+  background-color: hsl(210deg, 30%, 12%);
+  padding: 1rem 2rem;
+  overflow: auto;
+  border-radius: 5px;
+  color: #fff;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.content__actual span {
+  color: rgb(255, 164, 250);
+}
+
+.content__clipboard {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 8px 12px;
+  font-size: 0.875rem;
+  border: 2px solid gray;
+  border-radius: 4px;
+  color: white;
   cursor: pointer;
 }
 
@@ -70,5 +148,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  .main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .box {
+    width: 300px;
+  }
+
+  .title {
+    font-size: 3rem;
   }
 }
