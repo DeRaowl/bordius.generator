@@ -33,7 +33,7 @@ function Box() {
     transform: 'translate 0.2s ease',
     backgroundImage:
       'linear-gradient(70deg,hsl(240deg 100% 20%) 0%,hsl(289deg 100% 21%) 6%,hsl(315deg 100% 27%) 15%,hsl(329deg 100% 36%) 28%,hsl(337deg 100% 43%) 46%,hsl(357deg 91% 59%) 65%,hsl(17deg 100% 59%) 78%,hsl(34deg 100% 53%) 88%,hsl(45deg 100% 50%) 95%,hsl(55deg 100% 50%) 100%)',
-    boxShadow: '-100px 75px rgba(255,255,255,0.3)'
+    boxShadow: '-100px 75px rgba(20,25,155,0.1)'
   };
 
   const copyToClipBoard = () => {
